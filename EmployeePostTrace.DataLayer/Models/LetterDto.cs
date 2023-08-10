@@ -9,7 +9,7 @@ public class LetterDto
     public string Recipient { get; set; }
     public string Content { get; set; }
     public DateTime SendingDate { get; set; }
-    public bool IsIncoming { get; set; }
-    public int EmployeeId { get; set; }
+    public int SenderId { get; set; }
+    public int RecipientId { get; set; }
     public bool IsDeleted { get; set; }
 }

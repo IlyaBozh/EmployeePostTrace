@@ -6,7 +6,7 @@
 	[Recipient]      NCHAR (50)            NOT NULL,
 	[Content]        NCHAR (50)            NOT NULL,
 	[SendingDate]    DATETIME              NOT NULL,
-	[IsIncoming]     BIT                   NOT NULL,
-	[EmployeeId]     INT                   NOT NULL,
-	[IsDeleted]       BIT DEFAULT 0         NOT NULL
+	[SenderId]       INT                   NOT NULL,
+	[RecipientId]    INT                   NOT NULL,
+	[IsDeleted]      BIT DEFAULT 0         NOT NULL
 )
