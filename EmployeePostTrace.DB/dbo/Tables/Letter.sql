@@ -8,5 +8,5 @@
 	[SendingDate]    DATETIME              NOT NULL,
 	[IsIncoming]     BIT                   NOT NULL,
 	[EmployeeId]     INT                   NOT NULL,
-	[IsDelete]       BIT DEFAULT 0         NOT NULL
+	[IsDeleted]       BIT DEFAULT 0         NOT NULL
 )
