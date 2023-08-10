@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePostTrace.Api", "EmployeePostTrace.Api\EmployeePostTrace.Api.csproj", "{78DF9AF3-3D3A-4AB7-A9E9-2FE5B088C2E8}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EmployeePostTrace.DB", "EmployeePostTrace.DB\EmployeePostTrace.DB.sqlproj", "{5E1D5B30-5679-4614-968A-F3E125A17988}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{78DF9AF3-3D3A-4AB7-A9E9-2FE5B088C2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78DF9AF3-3D3A-4AB7-A9E9-2FE5B088C2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78DF9AF3-3D3A-4AB7-A9E9-2FE5B088C2E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E1D5B30-5679-4614-968A-F3E125A17988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1D5B30-5679-4614-968A-F3E125A17988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1D5B30-5679-4614-968A-F3E125A17988}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5E1D5B30-5679-4614-968A-F3E125A17988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1D5B30-5679-4614-968A-F3E125A17988}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E1D5B30-5679-4614-968A-F3E125A17988}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
