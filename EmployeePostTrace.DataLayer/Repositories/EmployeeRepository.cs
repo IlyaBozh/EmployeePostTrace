@@ -36,6 +36,16 @@ public class EmployeeRepository : BaseRepository, IEmployeeRepository
             commandType: CommandType.StoredProcedure);
     }
 
+    public async Task<EmployeeDto> GetByEmail(string email)
+    {
+        var lead = await _connectionString.QueryFirstOrDefaultAsync<EmployeeDto>(
+            StoredProcedures.Employee_GetByEmail,
+            param: new { email },
+            commandType: CommandType.StoredProcedure);
+
+        return lead;
+    }
+
     public async Task<EmployeeDto> GetById(int id)
     {
         var employee = (await _connectionString.QueryAsync<EmployeeDto>(
