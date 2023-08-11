@@ -15,6 +15,7 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "applicationUrl": "http://localhost:5066",
+      "CONNECTION_STRING": "Data Source=SQL6030.site4now.net;Initial Catalog=db_a9ab93_crmcryptosystem;User Id=db_a9ab93_crmcryptosystem_admin;Password=135792468q",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
