@@ -42,15 +42,12 @@ public class AuthService : IAuthService
 
         var employee = await _employeeRepository.GetByEmail(username);
 
-        if (employee == null)
+        if (employee == null || !PasswordHash.ValidatePassword(password, employee.Password))
         {
-            throw new NotFoundException("Сотрудник не найден");
+            throw new NotFoundException("Неверно введен логин или пароль");
         }
 
-        if (PasswordHash.ValidatePassword(password, employee.Password))
-        {
-            claimModel.Id = employee.Id;
-        }
+        claimModel.Id = employee.Id;
 
         return claimModel;
     }
