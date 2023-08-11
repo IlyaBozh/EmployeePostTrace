@@ -9,5 +9,5 @@ BEGIN
 		E.LastName, 
 		E.Patronymic
 	FROM dbo.[Employee] AS E
-
+	WHERE Id=@Id AND IsDeleted=0
 END

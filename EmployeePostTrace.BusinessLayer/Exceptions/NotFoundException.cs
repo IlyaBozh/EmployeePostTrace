@@ -1,5 +1,5 @@
 ﻿
-namespace EmployeePostTrace.DataLayer.Exceptions;
+namespace EmployeePostTrace.BusinessLayer.Exceptions;
 
 public class NotFoundException : Exception
 {

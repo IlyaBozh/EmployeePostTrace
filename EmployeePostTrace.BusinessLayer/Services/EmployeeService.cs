@@ -1,4 +1,6 @@
 ﻿
+using EmployeePostTrace.BusinessLayer.Exceptions;
+using EmployeePostTrace.BusinessLayer.Infrastructure;
 using EmployeePostTrace.BusinessLayer.Services.Interfaces;
 using EmployeePostTrace.DataLayer.Models;
 using EmployeePostTrace.DataLayer.Repositories.Interfaces;
@@ -18,9 +20,12 @@ public class EmployeeService : IEmployeeService
     {
         bool inUniqueEmail = await CheckEmailForUniqueness(employee.Email);
 
-       /* if (inUniqueEmail) { }*/
+        if (!inUniqueEmail) 
+        {
+            throw new NotUniqueEmailException("Пользователь с такой почтой уже зарегестрирован");
+        }
 
-        /*employee.Password*/
+        employee.Password = PasswordHash.HashPassword(employee.Password);
 
         var employeeId = await _employeeRepository.Add(employee);
 
@@ -35,7 +40,10 @@ public class EmployeeService : IEmployeeService
     {
         var employee = await _employeeRepository.GetByEmail(email);
 
-        /*if (employee == null) { }*/
+        if (employee is null) 
+        {
+            throw new NotFoundException("Сотрудник не найден");
+        }
 
         return employee;
     }
@@ -44,7 +52,10 @@ public class EmployeeService : IEmployeeService
     {
         var employee = await _employeeRepository.GetById(id);
 
-        /*if (employee == null) { }*/
+        if (employee is null)
+        {
+            throw new NotFoundException("Сотрудник не найден");
+        }
 
         return employee;
     }

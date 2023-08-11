@@ -1,7 +1,7 @@
 ﻿
 using System.Security.Cryptography;
 
-namespace EmployeePostTrace.DataLayer.Infrastructure;
+namespace EmployeePostTrace.BusinessLayer.Infrastructure;
 
 public class PasswordHash
 {
