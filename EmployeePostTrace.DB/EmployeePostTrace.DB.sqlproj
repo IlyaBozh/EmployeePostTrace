@@ -63,5 +63,18 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Employee.sql" />
     <Build Include="dbo\Tables\Letter.sql" />
+    <Build Include="dbo\Stored Procedures\Employee_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\Employee_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Employee_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\Letter_GetAllByRecipientId.sql" />
+    <Build Include="dbo\Stored Procedures\Letter_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\Letter_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\Letter_Update.sql" />
+    <Build Include="dbo\Stored Procedures\Letter_Add.sql" />
+    <Build Include="dbo\Stored Procedures\Letter_GetAllBySenderId.sql" />
+    <Build Include="dbo\Stored Procedures\Employee_GetByEmail.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dbo\Stored Procedures\Employee_Add.sql" />
   </ItemGroup>
 </Project>
