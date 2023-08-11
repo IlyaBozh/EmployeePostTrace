@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePostTrace.Api", "Em
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EmployeePostTrace.DB", "EmployeePostTrace.DB\EmployeePostTrace.DB.sqlproj", "{5E1D5B30-5679-4614-968A-F3E125A17988}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePostTrace.DataLayer", "EmployeePostTrace.DataLayer\EmployeePostTrace.DataLayer.csproj", "{FAA3942F-C5F7-44C1-BEEC-DFD6D211979E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{5E1D5B30-5679-4614-968A-F3E125A17988}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E1D5B30-5679-4614-968A-F3E125A17988}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5E1D5B30-5679-4614-968A-F3E125A17988}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FAA3942F-C5F7-44C1-BEEC-DFD6D211979E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAA3942F-C5F7-44C1-BEEC-DFD6D211979E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAA3942F-C5F7-44C1-BEEC-DFD6D211979E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAA3942F-C5F7-44C1-BEEC-DFD6D211979E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

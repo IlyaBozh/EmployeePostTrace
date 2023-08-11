@@ -8,6 +8,7 @@ public interface IEmployeeRepository
     Task<int> Add(EmployeeDto employeeDto);
     Task Delete(int id, bool isDeleted);
     Task<EmployeeDto> GetById(int id);
+    Task<List<EmployeeDto>> GetAll();
     Task<EmployeeDto> GetByEmail(string email);
     Task Update(EmployeeDto employeeDto);
 }
