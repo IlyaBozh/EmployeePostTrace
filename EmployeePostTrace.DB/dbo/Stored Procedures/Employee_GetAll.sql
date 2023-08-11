@@ -7,7 +7,8 @@ BEGIN
 		Id, 
 		FirstName, 
 		LastName, 
-		Patronymic
+		Patronymic,
+		Email
 	FROM dbo.Employee
 	WHERE IsDeleted = 0
 
