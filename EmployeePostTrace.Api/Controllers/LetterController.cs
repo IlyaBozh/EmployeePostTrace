@@ -46,18 +46,18 @@ public class LetterController : ControllerBase
     }
 
     [Authorize]
-    [HttpGet("/employee/{recipientId}/letters")]
+    [HttpGet("/employee/{recipientId}/letters/recipient")]
     [ProducesResponseType(typeof(LetterMainInfoResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(typeof(void), StatusCodes.Status403Forbidden)]
-    public async Task<ActionResult<List<LetterMainInfoResponse>>> GetAllByRecipientId(int senderId)
+    public async Task<ActionResult<List<LetterMainInfoResponse>>> GetAllByRecipientId(int recipientId)
     {
-        var result = await _letterService.GetAllByRecipientId(senderId);
+        var result = await _letterService.GetAllByRecipientId(recipientId);
         return Ok(_mapper.Map<List<LetterMainInfoResponse>>(result));
     }
 
     [Authorize]
-    [HttpGet("/employee/{senderId}/letters")]
+    [HttpGet("/employee/{senderId}/letters/sender")]
     [ProducesResponseType(typeof(LetterMainInfoResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(typeof(void), StatusCodes.Status403Forbidden)]
@@ -73,7 +73,7 @@ public class LetterController : ControllerBase
     [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(typeof(void), StatusCodes.Status403Forbidden)]
     [ProducesResponseType(typeof(void), StatusCodes.Status404NotFound)]
-    public async Task<ActionResult<LetterAllInfoResponse>> GetAccount(int id)
+    public async Task<ActionResult<LetterAllInfoResponse>> GetById(int id)
     {
         var result = await _letterService.GetById(id);
         if (result == null)
@@ -90,9 +90,9 @@ public class LetterController : ControllerBase
     [ProducesResponseType(typeof(void), StatusCodes.Status403Forbidden)]
     [ProducesResponseType(typeof(void), StatusCodes.Status403Forbidden)]
     [ProducesResponseType(typeof(void), StatusCodes.Status422UnprocessableEntity)]
-    public async Task<ActionResult> UpdateAccount([FromBody] UpdateLetterRequest accountRequest)
+    public async Task<ActionResult> UpdateAccount([FromBody] UpdateLetterRequest request)
     {
-        await _letterService.Update(_mapper.Map<LetterDto>(accountRequest));
+        await _letterService.Update(_mapper.Map<LetterDto>(request));
         return NoContent();
     }
 }

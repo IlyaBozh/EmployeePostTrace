@@ -1,8 +1,7 @@
 ﻿namespace EmployeePostTrace.Api.Models.Responses;
 
 public class LetterAllInfoResponse : LetterMainInfoResponse
-{
-    public int Id { get; set; }
+{ 
     public string Recipient { get; set; }
     public string Content { get; set; }
     public int SenderId { get; set; }

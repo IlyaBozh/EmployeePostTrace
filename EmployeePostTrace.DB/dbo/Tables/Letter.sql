@@ -8,5 +8,7 @@
 	[SendingDate]    DATETIME              NOT NULL,
 	[SenderId]       INT                   NOT NULL,
 	[RecipientId]    INT                   NOT NULL,
-	[IsDeleted]      BIT DEFAULT 0         NOT NULL
+	[IsDeleted]      BIT DEFAULT 0         NOT NULL,
+	FOREIGN KEY ([SenderId]) REFERENCES [dbo].[Employee] ([Id]),
+	FOREIGN KEY ([RecipientId]) REFERENCES [dbo].[Employee] ([Id])
 )

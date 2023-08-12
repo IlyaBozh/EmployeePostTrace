@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
+using EmployeePostTrace.Api.Extentions;
 using EmployeePostTrace.Api.Models.Requests;
 using EmployeePostTrace.Api.Models.Responses;
 using EmployeePostTrace.BusinessLayer.Services.Interfaces;
 using EmployeePostTrace.DataLayer.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Data;
 
 namespace EmployeePostTrace.Api.Controllers;
 
@@ -68,7 +68,7 @@ public class EmployeeController : ControllerBase
     public async Task<ActionResult<EmployeeAllInfoResponse>> GetById(int id)
     {
         var claims = this.GetClaims();
-        var lead = await _employeeService.GetById(id, claims);
+        var lead = await _employeeService.GetById(id);
 
         if (lead is null)
         {

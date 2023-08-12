@@ -74,8 +74,6 @@
     <Build Include="dbo\Stored Procedures\Letter_GetAllBySenderId.sql" />
     <Build Include="dbo\Stored Procedures\Employee_GetByEmail.sql" />
     <Build Include="dbo\Stored Procedures\Employee_GetAll.sql" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="dbo\Stored Procedures\Employee_Add.sql" />
+    <Build Include="dbo\Stored Procedures\Employee_Add.sql" />
   </ItemGroup>
 </Project>
