@@ -8,10 +8,7 @@ using EmployeePostTrace.BusinessLayer.Services.Interfaces;
 using EmployeePostTrace.DataLayer.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Moq;
-using System.Data;
-using System.Security.Claims;
 
 namespace EmployeePostTrace.Api.Tests;
 
