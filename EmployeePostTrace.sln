@@ -9,7 +9,9 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EmployeePostTrace.DB", "Emp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePostTrace.DataLayer", "EmployeePostTrace.DataLayer\EmployeePostTrace.DataLayer.csproj", "{FAA3942F-C5F7-44C1-BEEC-DFD6D211979E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePostTrace.BusinessLayer", "EmployeePostTrace.BusinessLayer\EmployeePostTrace.BusinessLayer.csproj", "{7BBFC4D6-9357-45EA-BADA-076C5611A2DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePostTrace.BusinessLayer", "EmployeePostTrace.BusinessLayer\EmployeePostTrace.BusinessLayer.csproj", "{7BBFC4D6-9357-45EA-BADA-076C5611A2DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePostTrace.BusinessLayer.Tests", "EmployeePostTrace.BusinessLayer.Tests\EmployeePostTrace.BusinessLayer.Tests.csproj", "{A895C913-DE6A-4F4C-AFB5-49CC5D4B08DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{7BBFC4D6-9357-45EA-BADA-076C5611A2DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BBFC4D6-9357-45EA-BADA-076C5611A2DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BBFC4D6-9357-45EA-BADA-076C5611A2DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A895C913-DE6A-4F4C-AFB5-49CC5D4B08DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A895C913-DE6A-4F4C-AFB5-49CC5D4B08DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A895C913-DE6A-4F4C-AFB5-49CC5D4B08DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A895C913-DE6A-4F4C-AFB5-49CC5D4B08DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
