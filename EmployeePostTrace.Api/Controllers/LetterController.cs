@@ -83,16 +83,16 @@ public class LetterController : ControllerBase
     }
 
     [Authorize]
-    [HttpPut]
+    [HttpPut("{id}")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(typeof(void), StatusCodes.Status400BadRequest)]
     [ProducesResponseType(typeof(void), StatusCodes.Status401Unauthorized)]
     [ProducesResponseType(typeof(void), StatusCodes.Status403Forbidden)]
     [ProducesResponseType(typeof(void), StatusCodes.Status403Forbidden)]
     [ProducesResponseType(typeof(void), StatusCodes.Status422UnprocessableEntity)]
-    public async Task<ActionResult> UpdateAccount([FromBody] UpdateLetterRequest request)
+    public async Task<ActionResult> UpdateLetter([FromBody] UpdateLetterRequest request, int id)
     {
-        await _letterService.Update(_mapper.Map<LetterDto>(request));
+        await _letterService.Update(_mapper.Map<LetterDto>(request), id);
         return NoContent();
     }
 }

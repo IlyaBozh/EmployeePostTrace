@@ -3,7 +3,7 @@
 AS
 BEGIN
 
-	SELECT Id, Header, Sender, Content, SendingDate
+	SELECT Id, Header, Sender, Recipient, Content, SendingDate
 	FROM dbo.[Letter]
 	WHERE Id=@Id
 

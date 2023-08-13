@@ -22,7 +22,7 @@ public class AuthController : ControllerBase
     public async Task<ActionResult<string>> Login([FromBody] LoginRequest loginRequest)
     {
         var user = await _authService.Login(loginRequest.Email, loginRequest.Password);
-
-        return Ok(_authService.GetToken(user));
+        var token = _authService.GetToken(user);
+        return Ok(token);
     }
 }

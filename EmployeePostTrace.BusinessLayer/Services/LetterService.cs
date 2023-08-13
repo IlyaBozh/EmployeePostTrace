@@ -26,5 +26,13 @@ public class LetterService : ILetterService
 
     public async Task<LetterDto> GetById(int id) => await _letterRepository.GetById(id);
 
-    public async Task Update(LetterDto letter) => await _letterRepository.Update(letter);
+    public async Task Update(LetterDto newLetter, int id)
+    {
+        var letter = await _letterRepository.GetById(id);
+
+        letter.Id = id;
+        letter.Content = newLetter.Content;
+        letter.Header = newLetter.Header;
+        await _letterRepository.Update(letter);
+    }
 }
