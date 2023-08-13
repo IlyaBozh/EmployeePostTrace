@@ -70,7 +70,7 @@ public class LetterRepository : BaseRepository, ILetterRepository
     {
         await _connectionString.ExecuteAsync(
            StoredProcedures.Letter_Update,
-           param: new { letter.Header, letter.Content },
+           param: new { letter.Id, letter.Header, letter.Content },
            commandType: CommandType.StoredProcedure);
     }
 }

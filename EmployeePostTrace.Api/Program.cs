@@ -1,23 +1,37 @@
-var builder = WebApplication.CreateBuilder(args);
+using EmployeePostTrace.Api.Infrastructure;
+using System.Data.SqlClient;
+using System.Data;
+using EmployeePostTrace.BusinessLayer.Middleware;
+using EmployeePostTrace.Api.Extentions;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
+IWebHostEnvironment environment = builder.Environment;
+
+var dbConfig = new DbConfig();
+builder.Configuration.Bind(dbConfig);
+
+builder.Services.AddScoped<IDbConnection>(c => new SqlConnection(dbConfig.CONNECTION_STRING));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAuthorization();
+builder.Services.AddAuthentications();
+builder.Services.AddServices();
+
+builder.Services.AddAutoMapper(typeof(MapperConfig));
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseMiddleware<ExceptionMiddleware>();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

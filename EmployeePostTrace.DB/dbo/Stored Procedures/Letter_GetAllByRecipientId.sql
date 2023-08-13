@@ -3,7 +3,7 @@
 AS
 BEGIN
 
-	SELECT Id, Header, SendingDate
+	SELECT Id, Sender, Header, SendingDate
 	FROM dbo.[Letter]
 	WHERE RecipientId=@RecipientId AND IsDeleted=0
 

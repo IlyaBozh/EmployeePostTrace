@@ -10,5 +10,5 @@ public interface ILetterService
     Task<List<LetterDto>> GetAllByRecipientId(int recipientId);
     Task<List<LetterDto>> GetAllBySenderId(int senderId);
     Task<LetterDto> GetById(int id);
-    Task Update(LetterDto letter);
+    Task Update(LetterDto letter, int id);
 }
