@@ -3,7 +3,7 @@ using EmployeePostTrace.DataLayer.Models;
 
 namespace EmployeePostTrace.BusinessLayer.Tests.TestModels;
 
-public static class EmployeeDataForTest
+public static class EmployeeDataForTests
 {
     public static EmployeeDto GetEmployee()
     {

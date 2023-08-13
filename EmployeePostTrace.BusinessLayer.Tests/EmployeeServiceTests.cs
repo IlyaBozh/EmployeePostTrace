@@ -24,7 +24,7 @@ public class EmployeeServiceTests
     [Test]
     public async Task Add()
     {
-        var employee = EmployeeDataForTest.GetEmployee();
+        var employee = EmployeeDataForTests.GetEmployee();
 
         _employeeRepositoryMock.Setup(e => e.Add(It.Is<EmployeeDto>(p => p.Id == employee.Id))).ReturnsAsync(employee.Id);
 
@@ -41,7 +41,7 @@ public class EmployeeServiceTests
 
     public async Task GetAll()
     {
-        var employee = EmployeeDataForTest.GetEmployee();
+        var employee = EmployeeDataForTests.GetEmployee();
 
         _employeeRepositoryMock.Setup(e => e.GetAll()).ReturnsAsync(new List<EmployeeDto>() { employee });
 
@@ -58,7 +58,7 @@ public class EmployeeServiceTests
     [Test]
     public async Task GetByEmail()
     {
-        var employee = EmployeeDataForTest.GetEmployee();
+        var employee = EmployeeDataForTests.GetEmployee();
 
         _employeeRepositoryMock.Setup(l => l.GetByEmail(employee.Email)).ReturnsAsync(employee);
         
@@ -73,15 +73,13 @@ public class EmployeeServiceTests
     [Test]
     public async Task GetById()
     {
-        var employee = EmployeeDataForTest.GetEmployee();
+        var employee = EmployeeDataForTests.GetEmployee();
 
         _employeeRepositoryMock.Setup(l => l.GetById(employee.Id)).ReturnsAsync(employee);
         var expected = employee;
-        //when
 
         var actual = await _sut.GetById(employee.Id);
 
-        //then
         Assert.AreEqual(expected, actual);
         _employeeRepositoryMock.Verify(l => l.GetById(employee.Id), Times.Once);
     }
@@ -89,7 +87,7 @@ public class EmployeeServiceTests
     [Test]
     public async Task Update()
     {
-        var employee = EmployeeDataForTest.GetEmployee();
+        var employee = EmployeeDataForTests.GetEmployee();
 
         _employeeRepositoryMock.Setup(l => l.GetById(employee.Id)).ReturnsAsync(employee);
         _employeeRepositoryMock.Setup(l => l.Update(employee));

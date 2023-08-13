@@ -8,12 +8,10 @@ namespace EmployeePostTrace.BusinessLayer.Services;
 public class LetterService : ILetterService 
 {
     private readonly ILetterRepository _letterRepository;
-    private readonly IEmployeeRepository _employeeRepository;
 
-    public LetterService(ILetterRepository letterRepository, IEmployeeRepository employeeRepository)
+    public LetterService(ILetterRepository letterRepository)
     {
         _letterRepository = letterRepository;
-        _employeeRepository = employeeRepository;
     }
 
     public async Task<int> Add(LetterDto letter) => await _letterRepository.Add(letter);
