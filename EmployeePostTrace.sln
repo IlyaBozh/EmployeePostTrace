@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeePostTrace.BusinessL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePostTrace.BusinessLayer.Tests", "EmployeePostTrace.BusinessLayer.Tests\EmployeePostTrace.BusinessLayer.Tests.csproj", "{A895C913-DE6A-4F4C-AFB5-49CC5D4B08DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeePostTrace.Api.Tests", "EmployeePostTrace.Api.Tests\EmployeePostTrace.Api.Tests.csproj", "{8FBB322F-869B-4377-B51D-634A8B66D389}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{A895C913-DE6A-4F4C-AFB5-49CC5D4B08DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A895C913-DE6A-4F4C-AFB5-49CC5D4B08DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A895C913-DE6A-4F4C-AFB5-49CC5D4B08DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FBB322F-869B-4377-B51D-634A8B66D389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FBB322F-869B-4377-B51D-634A8B66D389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FBB322F-869B-4377-B51D-634A8B66D389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FBB322F-869B-4377-B51D-634A8B66D389}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
